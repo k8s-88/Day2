@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Filters</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        div {
+            background-color: #99CCFF;
+            border: 2px solid black;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 20px;
+            /*width:500px;*/
+        }
+
+        img {
+            float: left;
+            margin: 0 20px 20px 20px;
+            border: 2px solid black;
+            filter: grayscale(1);
+            transition: filter 0.5s;
+        }
+
+       
+        .grayscale:hover {
+            filter: saturate(1) blur(5px);
+        }
+
+        .specsavers {
+            filter: blur(10px);
+        }
+
+        .sepia {
+            filter: sepia(.4);
+        }
+
+        .invert {
+            filter: invert(1)
+        }
+
+        .drop-shadow {
+            filter: drop-shadow(30px 10px 4px #4444dd)
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Original</h1>
+        <img src="images/owl.jpg" alt="owl" width="320" heigth="240" />
+    </div>
+    <div>
+        <h1>grayscale</h1>
+        <img class="grayscale" src="images/owl.jpg" alt="owl" width="320" heigth="240" />
+    </div>
+    <div>
+        <h1>blur</h1>
+        <img class="specsavers" src="images/owl.jpg" alt="owl" width="320" heigth="240" />
+    </div>
+    <div>
+        <h1>sepia</h1>
+        <img class="sepia" src="images/owl.jpg" alt="owl" width="320" heigth="240" />
+    </div>
+    <div>
+        <h1>invert</h1>
+        <img class="invert" src="images/owl.jpg" alt="owl" width="320" heigth="240" />
+    </div>
+    <div>
+        <h1>drop-shadow</h1>
+        <img class="drop-shadow" src="images/owl.jpg" alt="owl" width="320" heigth="240" />
+    </div>
+</body>
+
+</html>
